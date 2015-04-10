@@ -20,16 +20,11 @@ $roots_includes = array(
   'lib/gallery.php',          // Custom [gallery] modifications
   'lib/comments.php',         // Custom comments modifications
   'lib/scripts.php',          // Scripts and stylesheets
-  'lib/custom-post-types.php',// Custom post types
-  'lib/admin.php',            // Admin columns for post types
-  'lib/acf-fields.php',       // Generated code that registers custom fields by ACF
   'lib/resize.php',           // Resize images on the fly
   'lib/shortcodes.php',       // Shortcodes
   'lib/extras.php',           // Custom functions
-  'lib/feeds.php',            // Adding/modifying RSS feeds,
-  'lib/custom-pub-date.php',  // Temporary functions for adding pub date to custom field
+  'lib/acf-fields.php',       // Generated code that registers custom fields by ACF
   'lib/plugin-support-plugins.php',  // Add notices of required plugins for this theme
-  'lib/customizer.php'        // Customizer settings
 );
 
 foreach ($roots_includes as $file) {

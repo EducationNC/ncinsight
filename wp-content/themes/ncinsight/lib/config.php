@@ -12,10 +12,10 @@ add_theme_support('jquery-cdn');            // Enable to load jQuery from the Go
  * Configuration values
  */
 define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
-define('GOOGLE_FONTS', 'Lato:300,300italic,400,400italic,700,700italic|Merriweather:300,300italic,400,400italic,700,700italic');
+define('GOOGLE_FONTS', 'Lustria|Open+Sans:400,400italic,700,700italic');
 
 if (!defined('WP_ENV')) {
-  define('WP_ENV', 'production');  // scripts.php checks for values 'production' or 'development'
+  define('WP_ENV', 'development');  // scripts.php checks for values 'production' or 'development'
 }
 
 /**

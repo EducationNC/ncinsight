@@ -3,9 +3,8 @@
  * Define image sizes
  */
 
-add_image_size('medium-square', 400, 400, true);
-add_image_size('bio-headshot', 380, 425, true);
-add_image_size('featured-thumbnail', 295, 295, true);
+add_image_size('thumb-horizontal-large', 820, 480, true);
+add_image_size('thumb-horizontal', 400, 300, true);
 
 
 /**
@@ -28,7 +27,7 @@ function ednc_insert_custom_image_sizes( $sizes ) {
 
   return $sizes;
 }
-add_filter( 'image_size_names_choose', 'ednc_insert_custom_image_sizes' );
+// add_filter( 'image_size_names_choose', 'ednc_insert_custom_image_sizes' );
 
 
 
@@ -58,21 +57,6 @@ add_filter('wp_title', 'roots_wp_title', 10);
 
 
 
-/**
-* Add options pages for weekly wrapups
-*/
-if( function_exists('acf_add_options_page') ) {
-
-  acf_add_options_page(array(
-    'page_title'     => 'Weekly Wrapup',
-    'menu_title'    => 'Weekly Wrapup',
-    'menu_slug'     => 'weekly-wrapup',
-    'redirect'        => false
-  ));
-}
-
-
-
 // Load CSS to TinyMCE editor
 function add_mce_css( $mce_css ) {
   if ( ! empty( $mce_css ) )
@@ -96,92 +80,6 @@ function catch_that_image() {
 
   return $first_img;
 }
-
-
-/**
- * Rename post format to allow for "custom" format
- * http://premium.wpmudev.org/blog/how-to-quickly-rename-a-wordpress-post-format/
- */
-
-function rename_post_formats( $safe_text ) {
-  if ( $safe_text == 'Chat' )
-    return 'Feature';
-
-  return $safe_text;
-}
-add_filter( 'esc_html', 'rename_post_formats' );
-
-//rename Aside in posts list table
-function live_rename_formats() {
-  global $current_screen;
-
-  if ( $current_screen->id == 'edit-post' ) { ?>
-    <script type="text/javascript">
-    jQuery('document').ready(function() {
-
-      jQuery("span.post-state-format").each(function() {
-        if ( jQuery(this).text() == "Chat" )
-          jQuery(this).text("Feature");
-      });
-
-    });
-    </script>
-<?php }
-}
-add_action('admin_head', 'live_rename_formats');
-
-
-/**
- * Update Reimagining the school lunch master post to display updated date of most recent child post
- */
-function school_lunch_master_update($post) {
-  // Make sure this is firing when one of the children's statuses change to published
-  $children = array('reimagining-school-lunch-day-1', 'reimagining-school-lunch-day-2', 'reimagining-school-lunch-day-3');
-  if (in_array($post->post_name, $children)) {
-    // Get publish date of child post and set updated_date of master post
-    $date = get_post_meta($post->ID, 'updated_date', true);
-    update_post_meta( 5429, 'updated_date', $date );
-  }
-}
-add_action('future_to_publish', 'school_lunch_master_update', 10, 1);
-
-
-/**
-* Auto-subscribe or unsubscribe an Edit Flow user group when a post changes status
-*
-* @see http://editflow.org/extend/auto-subscribe-user-groups-for-notifications/
-*
-* @param string $new_status New post status
-* @param string $old_status Old post status (empty if the post was just created)
-* @param object $post The post being updated
-* @return bool $send_notif Return true to send the email notification, return false to not
-*/
-function ednc_ef_auto_subscribe_usergroup( $new_status, $old_status, $post ) {
-  global $edit_flow;
-
-  // When the post is first created, you might want to automatically set
-  // all of the user's user groups as following the post
-  // if ( 'draft' == $new_status ) {
-  //   // Get all of the user groups for this post_author
-  //   $usergroup_ids_to_follow = $edit_flow->user_groups->get_usergroups_for_user( $post->post_author );
-  //   $usergroup_ids_to_follow = array_map( 'intval', $usergroup_ids_to_follow );
-  //   $edit_flow->notifications->follow_post_usergroups( $post->ID, $usergroup_ids_to_follow, true );
-  // }
-
-  // You could also follow a specific user group based on post_status
-  if ( 'pending' == $new_status ) {
-    // You'll need to get term IDs for your user groups and place them as
-    // comma-separated values
-    $usergroup_ids_to_follow = array(
-      87, // id of editors group on prod site
-    );
-    $edit_flow->notifications->follow_post_usergroups( $post->ID, $usergroup_ids_to_follow, true );
-  }
-
-  // Return true to send the email notification
-  return $new_status;
-}
-add_filter( 'ef_notification_status_change', 'ednc_ef_auto_subscribe_usergroup', 10, 3 );
 
 
 

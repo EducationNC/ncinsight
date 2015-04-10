@@ -1932,23 +1932,6 @@ var Roots = {
         return(false);
       }
 
-      // Open splash on page load only on first page load
-      if (( firstImpression() || getVariable('splash') ) && !getVariable('nosplash')) {
-        $.magnificPopup.open({
-          items: {
-            src: '#splash',
-            type: 'inline'
-          },
-          modal: true
-        });
-      }
-
-      $(document).on(clickortap, '.popup-modal-dismiss', function (e) {
-        e.preventDefault();
-        $.magnificPopup.close();
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
-      });
-
       // Toggle menu button to x close state on click
       $('#trigger-offcanvas').on(clickortap, function() {
         if ($(this).hasClass('active')) {
@@ -1984,31 +1967,6 @@ var Roots = {
   home: {
     init: function() {
 
-      // Photo strip grid rotation on home page
-      $('#photo-strip').gridrotator({
-        rows: 1,
-        columns: 5,
-        w1024: {
-          rows: 1,
-          columns: 4
-        },
-        w768: {
-          rows: 2,
-          columns: 2
-        },
-        w480: {
-          rows: 1,
-          columns: 1
-        },
-        step: 1,
-        maxStep: 1,
-        animType: 'slideTop',
-        animSpeed: 300,
-        animEasingOut: 'ease',
-        animEasingIn: 'ease',
-        interval: 6000
-      });
-
     }
   },
   // About us page, note the change from about-us to about_us.
@@ -2034,7 +1992,7 @@ var Roots = {
       $('object:not(childof(.tableauPlaceholder)').wrap('<div class="object-wrapper"></div>');
 
       // Add special class to .entry-content-wrapper divs for Instagram embeds (not fixed ratio)
-      $('.instagram-media').parent('.entry-content-asset').addClass('instagram');
+      $('.instagram-media').parent('.entry-content-asset').addClass('no-fixed-ratio');
 
       // Open Magnific for all image link types inside articles
       $('.entry-content a[href$=".gif"], .entry-content a[href$=".jpg"], .entry-content a[href$=".png"], .entry-content a[href$=".jpeg"]').not('.gallery a').magnificPopup({

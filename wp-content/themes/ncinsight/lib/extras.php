@@ -32,16 +32,6 @@ function ednc_insert_custom_image_sizes( $sizes ) {
 
 
 /**
- * Clean up the_excerpt()
- */
-function roots_excerpt_more($more) {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'roots') . '</a>';
-}
-add_filter('excerpt_more', 'roots_excerpt_more');
-
-
-
-/**
  * Manage output of wp_title()
  */
 function roots_wp_title($title) {

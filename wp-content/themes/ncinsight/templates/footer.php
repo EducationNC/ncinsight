@@ -1,73 +1,35 @@
 <footer class="content-info" role="contentinfo">
-  <div class="above-footer hidden-print">
-    <ul class="list-inline text-center">
-      <li><img src="<?php echo get_template_directory_uri(); ?>/assets/public/imgs/zsrf-logo-white-transparent.png" width="153" alt="Z. Smith Reynolds Foundation" />
-      <li><img src="<?php echo get_template_directory_uri(); ?>/assets/public/imgs/sas_logo-white-transparent.png" width="78" alt="SAS Institute" />
-      <li><img src="<?php echo get_template_directory_uri(); ?>/assets/public/imgs/o2-energies-inc-white-transparent.png" width="78" alt="O2energies" />
-    </ul>
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h4><a href="http://www.nccppr.org" target="_blank">N.C. Center for Public Policy Research</a></h4>
+        <p>5 W. Hargett St., Suite 1110<br />
+        P.O. Box 430<br />
+        Raleigh, NC 27602</p>
 
-  <?php
-  wp_nav_menu(array(
-    'theme_location' => 'footer_navigation',
-    'container' => false,
-    'menu_class' => 'container menu-footer-nav hidden-print',
-    'walker' => new Walker_Nav_Menu
-  ));
-  ?>
+        <p><span class="icon-phone"></span> 919-832-2839<br />
+        <span class="icon-fax"></span> 919-832-2847</p>
+      </div>
 
-  <div class="below-footer">
-    <p class="text-center small">
-      &copy; <?php echo date('Y'); ?> EducationNC. All rights reserved.<br />
-      <a href="<?php echo get_permalink('1528'); ?>">Terms of service</a> | <a href="<?php echo get_permalink('1530'); ?>">Privacy policy</a>
-    </p>
+      <div class="col-md-3">
+        <h4><a href="https://npo.networkforgood.org/Donate/Donate.aspx?npoSubscriptionId=1002193" target="_blank">Donate Now &raquo;</a></h4>
+        <p>Support our work, and thereby North Carolina citizens, by donating through the Network for Good, a donation site for nonprofit groups.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h4><a href="http://www.nccppr.org/drupal/node/23" target="_blank">Join Now &raquo;</a></h4>
+        <p>Become a part of the solution! Stay informed on the latest policy development shaping your world.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h4>Connect With Us</h4>
+        <ul>
+          <li><span class="icon-facebook"></span> <a href="http://facebook.com/nccppr" target="_blank">Facebook</a></li>
+          <li><span class="icon-twitter"></span> <a href="http://twitter.com/nccppr" target="_blank">Twitter</a></li>
+          <li><span class="icon-linkedin"></span> <a href="https://www.linkedin.com/company/north-carolina-center-for-public-policy-research-nccppr-" target="_blank">LinkedIn</a></li>
+          <li><span class="icon-rss"></span> <a href="/feed" target="_blank">Syndicate</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
-
-<?php if (is_home()) : ?>
-  <div class="modal fade suggestion-modal hidden-print" id="suggestionModal" tabindex="-1" role="dialog" aria-labelledby="suggestionModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <?php gravity_form(3, false, false, false, null, true, '-1'); ?>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade photo-submission-modal hidden-print" id="photoSubmissionModal" tabindex="-2" role="dialog" aria-labelledby="photoSubmissionModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <?php gravity_form(5, false, false, false, null, true, '-2'); ?>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade email-signup-modal hidden-print" id="emailSignupModal" tabindex="-2" role="dialog" aria-labelledby="emailSignupModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <?php get_template_part('templates/email-signup'); ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-
-<?php if (is_home() || get_post_type() == 'tribe_events') : ?>
-  <div class="modal fade event-submission-modal hidden-print" id="eventSubmissionModal" tabindex="-3" role="dialog" aria-labelledby="eventSubmissionModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <?php gravity_form(6, false, false, false, null, true, '-2'); ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-
-<?php if (is_page('edlibrary') || is_tax('resource-type')) : ?>
-  <div class="modal fade edLibrary-submission-modal hidden-print" id="edLibrarySubmissionModal" tabindex="-3" role="dialog" aria-labelledby="edLibrarySubmissionModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <?php gravity_form(8, false, false, false, null, true, '-2'); ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-
-<?php get_template_part('templates/splash'); ?>

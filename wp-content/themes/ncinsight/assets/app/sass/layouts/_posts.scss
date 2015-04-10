@@ -1,0 +1,167 @@
+.column-banner {
+  display: none;
+  position: relative;
+  margin-top: -3.25em;
+  margin-bottom: 5em;
+  width: 100%;
+  height: 162px;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $screen-sm-min) {
+    height: 262px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    margin-top: -5em;
+  }
+
+  &.meck-monday {
+    background-image: url('../imgs/meck-monday.jpg');
+  }
+
+  &.the-monday-missive {
+    background-image: url('../imgs/the-monday-missive.jpg');
+  }
+
+  &.tech-tuesday {
+    background-image: url('../imgs/tech-tuesday.jpg');
+  }
+
+  &.the-wednesday-wire {
+    background-image: url('../imgs/the-wednesday-wire.jpg');
+  }
+
+  &.the-thursday-transcript {
+    background-image: url('../imgs/the-thursday-transcript.jpg');
+  }
+
+  &.friday-with-ferrel {
+    background-image: url('../imgs/friday-with-ferrel.jpg');
+  }
+
+  &.meck-monday, &.the-monday-missive, &.tech-tuesday, &.the-wednesday-wire, &.the-thursday-transcript, &.friday-with-ferrel {
+    display: block;
+
+    & + .entry-header .label {
+      display: none;
+    }
+  }
+}
+
+.hentry .entry-header {
+
+  img {
+    width: 100%;
+  }
+
+  &.photo-overlay {
+    margin-top: -52px;
+    margin-bottom: 0;
+    overflow: hidden;
+
+    & + div {
+      margin-top: 3em;
+    }
+
+    .article-title-overlay {
+      padding-bottom: 2.5em;
+      color: $white;
+    }
+
+    img {
+      position: relative;
+      width: auto;
+    }
+
+    h1 {
+      margin-top: 0;
+      padding-top: 28px;
+      text-shadow: 0px 0px 20px $midnight;
+    }
+
+    a {
+      color: $white;
+    }
+
+    @media (min-width: $screen-md-min) {
+      height: 600px;
+      margin-top: -5em;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+    }
+
+    // @media (min-width: $screen-md-min) {
+    //   height: 600px;
+    //   margin-top: -5em;
+    // }
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 1em;
+
+      &:after {
+        display: none;
+      }
+
+      .label {
+        position: relative;
+      }
+
+      .article-title-overlay {
+        position: relative;
+        padding-top: 15px;
+
+        h1 {
+          color: $midnight;
+          font-size: 2em;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}
+.hentry time { }
+.hentry .byline { }
+.hentry .longform-intro {
+  background: $deep-purple;
+  color: $white;
+  margin-top: 0 !important;
+  padding: 3em 0;
+
+  & + div {
+    margin-top: 3em;
+  }
+}
+.hentry .entry-content { }
+.hentry footer {
+  margin-bottom: 5em;
+}
+
+.share-btns {
+  line-height: 30px;
+  clear: both;
+
+  span:not(.label) {
+    vertical-align: bottom;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    line-height: 37px;
+
+    .label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.author-photo {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 33%;
+}

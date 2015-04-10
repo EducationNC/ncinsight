@@ -1,23 +1,6 @@
-.above-footer {
-  background: $midnight;
-
-  li {
-    padding: 1rem 2rem;
-  }
-}
-
-.below-footer {
-  background: $ice;
-  padding: 1em 0;
-
-  p {
-    margin: 0;
-    font-weight: normal;
-  }
-}
-
 .content-info {
-  @include gray-gradient-right;
+  border-top: 10px solid $midnight;
+  background: $tan;
   font-family: $font-family-sans-serif;
   font-weight: 300;
   font-ize: .9rem;
@@ -33,7 +16,7 @@
       color: $midnight;
 
       &:hover, &:active, &:focus {
-        color: $blue;
+        color: $gray;
         text-decoration: underline;
       }
     }
@@ -44,7 +27,7 @@
 
     ul {
       padding: 0 0 1em;
-      
+
       @media (min-width: $screen-sm-min) {
         padding: 1em 0 0 0;
       }
@@ -52,13 +35,13 @@
 
     & > li {
       & > a {
-        color: $purple-text;
+        color: $purple;
         @extend .h4;
         font-weight: normal;
         cursor: default;
 
         &:hover, &:active, &:focus {
-          color: $purple-text;
+          color: $purple;
           text-decoration: none;
         }
       }

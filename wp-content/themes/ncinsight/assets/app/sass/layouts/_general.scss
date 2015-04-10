@@ -117,7 +117,7 @@ section {
 }
 
 .callout {
-  @include gray-gradient-right;
+  background: $tan;
   padding: 30px;
   margin: 0 0 1.25rem;
   overflow: hidden;
@@ -150,7 +150,7 @@ section {
   .menu {
     list-style: none;
     padding: 0;
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-serif;
 
     li {
       padding-bottom: .25em;
@@ -158,7 +158,7 @@ section {
 
       &.active {
         a {
-          color: $purple-text;
+          color: $gold;
         }
       }
     }
@@ -168,7 +168,7 @@ section {
       color: $midnight;
 
       &:hover, &:active, &:focus {
-        color: $blue;
+        color: $gold;
       }
     }
   }
@@ -179,7 +179,7 @@ section {
 }
 
 .aside {
-  @include gray-gradient-right;
+  background: $tan;
   padding: 10px 20px;
 
   @media (min-width: 545px) {
@@ -206,7 +206,7 @@ section {
 
 .sep {
   margin: 2em 0;
-  border-bottom: 1px solid $ice;
+  border-bottom: 1px solid $tan;
   width: 100%;
   height: 0;
 }

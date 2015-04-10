@@ -1,29 +1,28 @@
-
 .mobile-bar {
-  color: $gray-text;
+  background: $tan;
+  color: $gray;
   height: 2.8125rem;
   line-height: 2.8125rem;
   position: relative;
   z-index: 2;
-  @include gray-gradient-right;
 
   a {
-    color: $gray-text;
+    color: $gray;
     text-decoration: none !important;
     transition: color .3s;
 
     &:hover, &:focus, &:active {
-      color: $gray-text;
+      color: $gray;
     }
   }
 
   .title {
+    background: $purple;
     width: 134px;
     height: 55px;
     padding: 10px 0;
     margin: 0 auto;
     text-align: center;
-    @include purple-gradient-right;
 
     img {
       vertical-align: top;
@@ -70,7 +69,7 @@
     border-radius: 1px;
     height: 4px;
     width: 30px;
-    background: $gray-text;
+    background: $gray;
     position: absolute;
     display: block;
     content: '';
@@ -108,7 +107,7 @@
 .mobile-bar-search {
   color: $midnight;
   position: relative;
-  background-color: $ice;
+  background-color: $tan;
   padding: 15px 10px 10px;
   position: absolute;
   top: 2.8125rem;
@@ -150,6 +149,7 @@
 }
 
 .oc-level {
+  background: $tan;
   position: absolute;
   top: 0;
   left: 0;
@@ -157,13 +157,12 @@
   height: 100%;
   padding-top: 50px;
   z-index: 2;
-  @include gray-gradient-right;
   transform: translate3d(-100%, 0, 0);
 
   h4 {
     font-size: 1.5rem;
     font-weight: normal;
-    color: $purple-text;
+    color: $purple;
     padding: 2px 10px;
     margin: 0;
   }
@@ -173,7 +172,7 @@
     margin-left: 0;
     padding-left: 0;
     font-size: 1.25rem;
-    border-bottom: 1px solid $ice;
+    border-bottom: 1px solid $tan;
 
     &.no-border {
       border: none;
@@ -181,16 +180,16 @@
   }
 
   a:not(.button) {
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-serif;
     text-decoration: none;
     color: $midnight;
     line-height: 2em;
     display: block;
     padding: 2px 10px;
-    border-top: 1px solid $ice;
+    border-top: 1px solid $tan;
 
     &:hover, &:active, &:focus {
-      background: $ice;
+      background: $tan;
     }
   }
 
@@ -203,8 +202,8 @@
   a.oc-back {
     font-size: 1rem;
     font-weight: light;
-    color: $blue;
-    background: $ice;
+    color: $gold;
+    background: $tan;
     padding: 2px 10px;
   }
 

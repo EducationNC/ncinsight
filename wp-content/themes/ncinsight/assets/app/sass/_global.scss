@@ -15,22 +15,21 @@ a {
   text-decoration: underline;
 
   &:hover, &:active, &:focus {
-    color: $blue-dark;
     text-decoration: underline;
   }
 }
 
 .content-section-title {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
   font-weight: 300;
-  color: $purple-text;
+  color: $purple;
   font-size: 2.25rem;
   text-align: center;
   margin-bottom: 0;
 }
 
 .content-section-subtitle {
-  font-family: $font-family-serif;
+  font-family: $font-family-sans-serif;
   font-weight: 300;
   font-style: italic;
   color: $midnight;
@@ -39,14 +38,14 @@ a {
 }
 
 .list-item-title {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
   font-weight: 300;
   color: $midnight;
   font-size: 1.125rem;
 }
 
 h1, .h1, .article-title, .entry-title {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
   color: $midnight;
   font-size: $font-size-h1;
   font-weight: normal;
@@ -69,15 +68,15 @@ h1, .h1, .article-title, .entry-title {
 }
 
 h2, .h2, .article-subtitle {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
   font-weight: 300;
-  color: $purple-text;
+  color: $purple;
   font-size: $font-size-h2;
   white-space: normal;
 }
 
 h3, .h3, .article-section-title {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
   font-weight: normal;
   color: $midnight;
   font-size: $font-size-h3;
@@ -87,7 +86,7 @@ h3, .h3, .article-section-title {
   }
 
   .entry-content li & {
-    font-family: $font-family-serif;
+    font-family: $font-family-sans-serif;
     font-weight: 300;
     font-style: italic;
     margin-top: 1em;
@@ -95,7 +94,7 @@ h3, .h3, .article-section-title {
 }
 
 h4, .h4, .article-section-subtitle {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-serif;
   font-weight: normal;
   color: $midnight;
   font-size: $font-size-h4;
@@ -114,62 +113,17 @@ h4, .h4, .article-section-subtitle {
 }
 
 .meta, .attr, .duration {
-  font-family: $font-family-serif;
+  font-family: $font-family-sans-serif;
   font-weight: normal;
   font-size: $font-size-h6;
 
   li & {
-    color: $blue-dark;
+    color: $gray;
 
     a {
       text-decoration: none;
     }
   }
-}
-
-.label {
-  @include blue-gradient-right;
-  color: $ice;
-  padding: 5px 15px;
-  font-size: 1rem;
-  min-width: 140px;
-  font-family: $font-family-serif;
-  font-weight: 300;
-  border-radius: 0;
-
-  &.big {
-    font-size: 1.25rem;
-    line-height: 1em;
-    padding: 1rem 1.5rem 1.0625rem;
-  }
-
-  &.small {
-    font-size: .7rem;
-    line-height: 1em;
-    vertical-align: middle;
-    color: $ice;
-    background: darken($ice-dark, 10%);
-  }
-
-  a {
-    text-decoration: none;
-    color: $ice;
-  }
-
-  [class^="icon-"],
-  [class*=" icon-"] {
-    line-height: 0;
-    font-size: 1.5em;
-    vertical-align: -5px;
-  }
-}
-
-.column-name {
-  font-family: $font-family-serif;
-  font-size: $font-size-h2;
-  font-style: italic;
-  color: $white;
-  margin: 1em 0 0;
 }
 
 .caption {
@@ -188,7 +142,7 @@ h4, .h4, .article-section-subtitle {
 }
 
 blockquote, .blockquote {
-  font-family: $font-family-serif;
+  font-family: $font-family-sans-serif;
   font-weight: 300;
   font-style: italic;
   margin: 0 0 1em;
@@ -198,7 +152,7 @@ blockquote, .blockquote {
   p {
     font-weight: inherit;
     padding: 10px 20px;
-    border-left: 3px solid $ice;
+    border-left: 3px solid $tan;
     margin: 0;
 
     &[style*=left], &[style*=right], &[style*=center] {
@@ -210,8 +164,8 @@ blockquote, .blockquote {
       font-size: $font-size-h3;
       position: relative;
       padding: 1.25rem 0;
-      border-top: 3px solid $ice;
-      border-bottom: 3px solid $ice;
+      border-top: 3px solid $tan;
+      border-bottom: 3px solid $tan;
       margin: 0 0 1.25rem;
 
       @media (min-width: 545px) {

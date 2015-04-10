@@ -37,7 +37,7 @@
       </div>
 
       <div class="btn-group">
-        <a href="https://donatenow.networkforgood.org/nccppr" class="btn btn-primary btn-lg"><small>Donate Now</small></a>
+        <a href="https://donatenow.networkforgood.org/nccppr" class="btn btn-default btn-lg"><small>Donate Now</small></a>
       </div>
     </div>
   </nav>

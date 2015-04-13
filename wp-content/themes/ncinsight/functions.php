@@ -25,6 +25,7 @@ $roots_includes = array(
   'lib/extras.php',           // Custom functions
   'lib/acf-fields.php',       // Generated code that registers custom fields by ACF
   'lib/plugin-support-plugins.php',  // Add notices of required plugins for this theme
+  'lib/customizer.php'        // Customizer settings
 );
 
 foreach ($roots_includes as $file) {

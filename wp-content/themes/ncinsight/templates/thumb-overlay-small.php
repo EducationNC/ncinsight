@@ -26,6 +26,6 @@ if (has_post_thumbnail()) {
 
   <div class="col-xs-9 col-sm-12 extra-padding">
     <h4 class="post-title visible-xs-block"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-    <p class="meta">by <?php the_author(); ?> on <date><?php echo the_time(get_option('date_format')); ?></date></p>
+    <p class="meta">by <?php the_field('author'); ?> on <date><?php echo the_time(get_option('date_format')); ?></date></p>
   </div>
 </div>

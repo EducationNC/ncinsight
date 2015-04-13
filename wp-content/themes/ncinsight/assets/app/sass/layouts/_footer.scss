@@ -1,13 +1,30 @@
 .content-info {
-  border-top: 10px solid $midnight;
+  border-top: 10px solid $gray;
   background: $tan;
   font-family: $font-family-sans-serif;
   font-weight: 300;
   font-ize: .9rem;
 
   .container {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  h4 {
+    a {
+      color: $midnight;
+      text-decoration: none;
+
+      &:hover, &:active, &:focus {
+        color: $gold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
 
   .menu-footer-nav {

@@ -8,14 +8,14 @@ $recent = new WP_Query($args);
 
 if ($recent->have_posts()) : ?>
   <section class="container">
-    <div class="row">
+    <div class="clearfix">
       <?php
       // Display first post from WP_Query results
       $post = $recent->posts[0];
       setup_postdata($post);
       ?>
 
-      <div class="post has-photo-overlay">
+      <div class="post has-photo-overlay large-post no-padding">
         <div class="col-md-8">
           <?php get_template_part('templates/thumb-overlay', 'feature'); ?>
         </div>
@@ -53,8 +53,28 @@ if ($recent->have_posts()) : ?>
   <div class="row">
     <div class="col-md-4">
       <h3 class="content-section-title">Blog: From the Center Out</h3>
-      <div class="content-listing extra-padding">
+      <div class="content-listing">
+        <?php
+        $blog_title = get_theme_mod('recent_blog_title');
+        $blog_date = get_theme_mod('recent_blog_date');
+        $blog_url = get_theme_mod('recent_blog_url');
+        $blog_img = get_theme_mod('recent_blog_img');
 
+        if ($blog_title) {
+          echo '<h4><a href="'. $blog_url . '" target="_blank">' . $blog_title . '</a></h4>';
+        }
+
+        if ($blog_date) {
+          echo '<p class="meta">' . $blog_date . '</p>';
+        }
+
+        if ($blog_img) {
+          echo '<p><a href="' . $blog_url . '" target="_blank"><img src="' . $blog_img . '"></p>';
+        }
+        ?>
+
+        <hr />
+        <a class="btn btn-default btn-lg" href="http://www.nccppr.org/drupal/views/policy-research/blog" target="_blank">Read more at NCCPPR &raquo;</a>
       </div>
     </div>
 

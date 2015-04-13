@@ -25,6 +25,21 @@
   }
 }
 
+.ncinsight-logo {
+  position: absolute;
+  top: 27px;
+  left: 144px;
+  z-index: 2;
+
+  a {
+    display: block;
+  }
+
+  img {
+    height: 62px;
+  }
+}
+
 .banner {
   margin-bottom: 5em;
   position: relative;
@@ -32,11 +47,11 @@
   font-family: $font-family-serif;
 
   a {
-    color: $midnight;
+    color: $tan;
     text-decoration: none;
 
     &:hover {
-      color: $gray;
+      color: lighten($tan, 10%);
     }
   }
 
@@ -73,7 +88,7 @@
   .search {
     float: right;
     max-width: 240px;
-    margin-top: .5rem;
+    margin-top: 8px;
   }
 
   .navbar {
@@ -137,6 +152,7 @@
         line-height: 44px;
         font-size: 1.2em;
         padding: 0;
+        color: $midnight;
 
         &:before {
           position: absolute;
@@ -177,6 +193,13 @@
   .btn-group {
     a {
       color: $white;
+    }
+  }
+
+  .input-group {
+    .input-sm {
+      height: 28px;
+      border-radius: 0;
     }
   }
 }

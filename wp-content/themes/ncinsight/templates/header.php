@@ -1,7 +1,11 @@
 <header id="header" class="banner visible-md-block visible-lg-block" role="banner">
   <div class="container-fluid">
     <div class="logo">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/public/imgs/nccppr-logo.svg" alt="NCCPPR" /></a>
+      <a href="http://www.nccppr.org"><img src="<?php echo get_template_directory_uri(); ?>/assets/public/imgs/nccppr-logo.svg" alt="NCCPPR" /></a>
+    </div>
+
+    <div class="ncinsight-logo">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/public/imgs/ncinsight-logo.svg" alt="North Carolina Insight" /></a>
     </div>
 
     <div class="caption"><?php // echo get_bloginfo('description'); ?></div>

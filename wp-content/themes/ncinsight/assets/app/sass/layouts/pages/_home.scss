@@ -12,6 +12,19 @@
   }
 }
 
+.large-post {
+  background: $tan;
+  overflow: hidden;
+
+  .photo-overlay {
+    margin: 0;
+  }
+
+  .col-md-4 {
+    padding: 3em 1em;
+  }
+}
+
 .photo-overlay {
   position: relative;
   margin: 0 0 1em;

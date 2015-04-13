@@ -10,7 +10,7 @@ if (has_post_thumbnail()) {
 }
 ?>
 
-<div class="photo-overlay small-wide">
+<div class="photo-overlay">
   <h2 class="post-title"><?php the_title(); ?></h2>
   <p class="meta">by <?php the_field('author'); ?> on <date><?php the_time(get_option('date_format')); ?></date></p>
   <a class="mega-link" href="<?php the_permalink(); ?>"></a>

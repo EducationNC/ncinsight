@@ -1,5 +1,8 @@
 <nav id="oc-menu" class="oc-menu hidden-print">
   <div class="oc-level">
+    <ul class="no-margin">
+      <li><a href="/">Home</a></li>
+    </ul>
     <?php
     wp_nav_menu(array(
       'theme_location' => 'minor_navigation',
@@ -15,7 +18,7 @@
 
     <ul>
       <li>
-        <a href="https://donatenow.networkforgood.org/nccppr" class="btn btn-primary btn-lg"><small>Donate Now</small></a>
+        <a href="https://donatenow.networkforgood.org/nccppr" class="btn btn-default btn-lg"><small>Donate Now</small></a>
       </li>
     </ul>
   </div>

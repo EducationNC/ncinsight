@@ -28,6 +28,18 @@
       vertical-align: top;
     }
   }
+
+  .logos {
+
+    img {
+      height: 45px;
+
+      &.ncinsight {
+        padding-top: 5px;
+        height: 40px;
+      }
+    }
+  }
 }
 
 .mobile-bar-section {

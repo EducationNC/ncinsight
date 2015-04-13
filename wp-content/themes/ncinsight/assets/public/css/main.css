@@ -7819,6 +7819,10 @@ img.mfp-img {
           box-sizing: content-box;
 }
 
+body {
+  position: relative;
+}
+
 section {
   margin-bottom: 5em;
 }
@@ -8098,6 +8102,13 @@ section {
 }
 .mobile-bar .title img {
   vertical-align: top;
+}
+.mobile-bar .logos img {
+  height: 45px;
+}
+.mobile-bar .logos img.ncinsight {
+  padding-top: 5px;
+  height: 40px;
 }
 
 .mobile-bar-section {

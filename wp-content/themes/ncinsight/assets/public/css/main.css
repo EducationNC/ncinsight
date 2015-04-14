@@ -8074,6 +8074,15 @@ section {
   }
 }
 
+.label {
+  background: #2B3E50;
+  border-radius: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  vertical-align: 5px;
+}
+
 .mobile-bar {
   background: #E8E7E2;
   color: #6C6F77;
@@ -8924,6 +8933,9 @@ section {
 .archive .hentry h2 a, .search .hentry h2 a {
   color: #613C88;
   text-decoration: none;
+}
+.archive .btn, .archive .button, .search .btn, .search .button {
+  white-space: normal;
 }
 
 .column-banner {

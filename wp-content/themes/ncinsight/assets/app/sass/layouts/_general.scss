@@ -240,3 +240,12 @@ section {
     @include at2x('play-small', 51px, 51px);
   }
 }
+
+.label {
+  background: $midnight;
+  border-radius: 0;
+  font-family: $font-family-sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  vertical-align: 5px;
+}

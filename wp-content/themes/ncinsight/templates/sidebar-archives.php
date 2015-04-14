@@ -21,6 +21,10 @@
     $expanded_month = $days[0]->month;
   }
 
+  // Determine how many days there are and add iterator so we can check for the last day
+  $size = sizeof($days);
+  $i = 1;
+
   // Loop through each date to create the nested structure
   foreach($days as $day) :
     $year_current = $day->year;
@@ -66,12 +70,23 @@
       </a>
     </li>
 
+    <?php if ($i == $size) { ?>
+      </ul>
+      </div><!-- .wrapper-month -->
+      </div><!-- .archive-month -->
+    <?php } ?>
+
     <?php
     $year_prev = $year_current;
     $month_prev = $month_current;
+    $i++;
   endforeach;
   ?>
   </div><!-- #accordion-months -->
   </div><!-- .wrapper-year -->
   </div><!-- .archive-year -->
 </div><!-- #accordion-years -->
+
+<p>
+  <a class="btn btn-default btn-lg" href="http://www.nccppr.org/drupal/content/views/policy-research/north-carolina-insight/north-carolina-insight-archives">Click here for archives of all previous issues</a>
+</p>

@@ -1,19 +1,7 @@
 <?php
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $args = array(
-  'post_type' => array('post', 'map', 'ednews'),
-  'tax_query' => array(
-    array(
-      'taxonomy' => 'appearance',
-      'field' => 'slug',
-      'terms' => 'hide-from-archives',
-      'operator' => 'NOT IN'
-    )
-  ),
-  'paged' => $paged,
-  'meta_key' => 'updated_date',
-  'orderby' => 'meta_value_num',
-  'order' => 'DESC'
+  'paged' => $paged
 );
 
 query_posts($args);

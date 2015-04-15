@@ -9084,4 +9084,11 @@ section {
   width: 33%;
 }
 
+.footnotes {
+  margin: 2em 0;
+  padding: 1em 0;
+  border-top: 1px solid #E8E7E2;
+  border-bottom: 1px solid #E8E7E2;
+}
+
 /*# sourceMappingURL=main.css.map */

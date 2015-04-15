@@ -3,6 +3,7 @@
  * Define image sizes
  */
 
+add_image_size('medium-square', 400, 400, true);
 add_image_size('thumb-horizontal-large', 820, 480, true);
 add_image_size('thumb-horizontal', 400, 300, true);
 
@@ -27,7 +28,7 @@ function ednc_insert_custom_image_sizes( $sizes ) {
 
   return $sizes;
 }
-// add_filter( 'image_size_names_choose', 'ednc_insert_custom_image_sizes' );
+add_filter( 'image_size_names_choose', 'ednc_insert_custom_image_sizes' );
 
 
 

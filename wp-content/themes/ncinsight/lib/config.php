@@ -15,7 +15,7 @@ define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only
 define('GOOGLE_FONTS', 'Lustria|Open+Sans:400,400italic,700,700italic');
 
 if (!defined('WP_ENV')) {
-  define('WP_ENV', 'development');  // scripts.php checks for values 'production' or 'development'
+  define('WP_ENV', 'production');  // scripts.php checks for values 'production' or 'development'
 }
 
 /**

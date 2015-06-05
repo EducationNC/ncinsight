@@ -33,13 +33,7 @@ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
       <title><?php the_title_rss(); ?></title>
       <link><?php the_permalink_rss(); ?></link>
       <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
-      <dc:creator><?php
-      if ( function_exists( 'coauthors_posts_links' ) ) {
-        coauthors();
-      } else {
-        the_author();
-      }
-      ?></dc:creator>
+      <dc:creator><?php the_field('author'); ?></dc:creator>
       <guid isPermaLink="false"><?php the_guid(); ?></guid>
       <description><![CDATA[<?php
       if (has_post_thumbnail()) {
@@ -52,7 +46,7 @@ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
       }
       if ($image_sized) {
         $image_post = get_post($image_id);
-        echo '<table id="templateRows" border="0" cellspacing="0" cellpadding="0" width="600" style="font-family: Arial; sans-serif; color: #2b3e50;">';
+        echo '<table id="templateRows" border="0" cellspacing="0" cellpadding="0" width="564" style="font-family: Arial; sans-serif; color: #2b3e50;">';
         echo '<tr>';
         echo '<td style="width: 150px; max-width: 25%" class="templateColumnContainer" valign="top">';
         if ($image_sized['url']) {

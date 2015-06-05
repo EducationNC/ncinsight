@@ -47,6 +47,18 @@ function roots_wp_title($title) {
 add_filter('wp_title', 'roots_wp_title', 10);
 
 
+/**
+* Add options pages for weekly wrapups
+*/
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(array(
+    'page_title'     => 'Weekly Wrapup',
+    'menu_title'    => 'Weekly Wrapup',
+    'menu_slug'     => 'weekly-wrapup',
+    'redirect'        => false
+  ));
+}
+
 
 // Load CSS to TinyMCE editor
 function add_mce_css( $mce_css ) {

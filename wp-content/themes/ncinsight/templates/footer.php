@@ -33,3 +33,11 @@
     </div>
   </div>
 </footer>
+
+<div class="modal fade email-signup-modal hidden-print" id="emailSignupModal" tabindex="-2" role="dialog" aria-labelledby="emailSignupModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <?php get_template_part('templates/email-signup'); ?>
+    </div>
+  </div>
+</div>

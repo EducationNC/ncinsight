@@ -37,10 +37,10 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
-	
+
 	register_field_group(array (
 		'key' => 'group_54b81a88ad87a',
-		'title' => 'Weekly Wrapup Articles',
+		'title' => 'Weekly Update Articles',
 		'fields' => array (
 			array (
 				'key' => 'field_54b81a9977461',
@@ -48,7 +48,7 @@ if(function_exists("register_field_group"))
 				'name' => 'posts_to_include',
 				'prefix' => '',
 				'type' => 'relationship',
-				'instructions' => 'Select articles to include in Weekly Wrapup email. Sends Fridays at 3pm.',
+				'instructions' => 'Select articles to include in Weekly Update email. Sends Fridays at 3pm.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
@@ -74,7 +74,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'options_page',
 					'operator' => '==',
-					'value' => 'weekly-wrapup',
+					'value' => 'weekly-update',
 				),
 			),
 		),

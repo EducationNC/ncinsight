@@ -52,9 +52,9 @@ add_filter('wp_title', 'roots_wp_title', 10);
 */
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(
-    'page_title'     => 'Weekly Wrapup',
-    'menu_title'    => 'Weekly Wrapup',
-    'menu_slug'     => 'weekly-wrapup',
+    'page_title'     => 'Weekly Update',
+    'menu_title'    => 'Weekly Update',
+    'menu_slug'     => 'weekly-update',
     'redirect'        => false
   ));
 }

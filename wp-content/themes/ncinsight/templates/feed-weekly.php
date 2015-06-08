@@ -1,6 +1,6 @@
 <?php
 /**
-* Posts from the Weekly Wrapup options page - RSS2 Template
+* Posts from the Weekly Update options page - RSS2 Template
 */
 
 $articles = get_field('posts_to_include', 'option');
@@ -18,7 +18,7 @@ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 <?php do_action('rss2_ns'); ?>>
 
 <channel>
-  <title><?php bloginfo_rss('name'); ?> - Weekly Wrapup Feed</title>
+  <title><?php bloginfo_rss('name'); ?> - Weekly Update Feed</title>
   <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
   <link><?php bloginfo_rss('url') ?></link>
   <description><?php bloginfo_rss('description') ?></description>

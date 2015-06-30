@@ -761,7 +761,7 @@
                                         <br />
                                         <a class="utilityLink" href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp; <a class="utilityLink" href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;<br />
                                         <br />
-                                        *|HTML:REWARDS|*
+                                        *|REWARDS|*
                                       </td>
                                     </tr>
                                   </tbody>
